@@ -25,6 +25,12 @@
 
 <section class="hotel-rooms spad">
         <div class="container">
+        <div class="row">
+<strong>Price: &nbsp;</strong>
+<a href="{{route('property',[ 'sort'=>'low_high'])}}">Low to High</a> &nbsp;|&nbsp;
+<a href="{{route('property',[ 'sort'=>'high_low'])}}">High to Low</a>
+</div>
+<br>
             <div class="row">
 
             @foreach($properties as $property)

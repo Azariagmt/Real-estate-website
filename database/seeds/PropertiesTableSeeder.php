@@ -22,7 +22,8 @@ class PropertiesTableSeeder extends Seeder
             'bathrooms'=>4,
             'size'=>230,
             'bedrooms'=>5,
-            'parking'=>2
+            'parking'=>2,
+            'location'=>'Gerji'
         ]);
     }
 }

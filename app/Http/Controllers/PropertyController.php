@@ -8,8 +8,14 @@ use App\Property;
 class PropertyController extends Controller
 {
     public function getPropertiesPage(){
-        $properties = Property::inRandomOrder()->take(8)->get();
+        $properties = Property::all();
 
+        if(request()->sort == 'low_high'){
+            $properties =$properties->sortBy('price');
+        }elseif(request()->sort =='high_low'){
+            $properties =$properties->sortByDesc('price');
+        }
+         
         return view('properties',
     [
         'properties' => $properties

@@ -25,6 +25,8 @@ class CreatePropertiesTable extends Migration
             $table->integer('size');
             $table->integer('bedrooms');
             $table->integer('parking');
+            $table->string('location');
+            $table->boolean('featured')->default(false);
         });
     }
 
