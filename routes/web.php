@@ -24,3 +24,9 @@ Route::get('/aboutUs', function () {
 Route::get('/properties', 'PropertyController@getPropertiesPage')->name('property');
 
 Route::get('/properties/{property}', 'PropertyController@getSelectedPropertiesPage')->name('property-selected');
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
+
+Route::get('pagenotfound', 'HomeController@pageNotFound')->name('not-found');

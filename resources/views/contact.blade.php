@@ -18,8 +18,9 @@
 		</div>
 		<div class="container">
 			<ul class="main-menu">
-				<li><a href="{{route('about')}}">About Us</a></li>
-				<li><a href="{{route('property')}}">Property</a></li>
+			<li><a href="{{route('property')}}">Properties</a></li>
+				<li><a href="{{route('contact')}}">Selling</a></li>
+				<li><a href="{{route('about')}}">About Us</a></li>		
 			</ul>
 		</div>
 	</header>

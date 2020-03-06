@@ -14,12 +14,12 @@
 			<img src="img/logo.png" alt="">
 		</a>
 		<div class="nav-switch">
-			<i class="fa fa-bars"></i>
+			<i class="fa fa-bars"></i>git
 		</div>
 		<div class="container">
 			<ul class="main-menu">
-
-				<li><a href="{{route('property')}}">Property</a></li>
+				<li><a href="{{route('property')}}">Properties</a></li>
+				<li><a href="{{route('contact')}}">Selling</a></li>
 
 				<li><a href="{{route('contact')}}">Contact</a></li>
 			</ul>
