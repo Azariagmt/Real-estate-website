@@ -30,3 +30,9 @@ Route::group(['prefix' => 'admin'], function () {
 });
 
 Route::get('pagenotfound', 'HomeController@pageNotFound')->name('not-found');
+
+Route::get('/selling','PropertyController@getSellingPage')->name('selling');
+
+Route::group(['prefix' => 'laravel-filemanager', 
+'middleware' => ['web', 'auth']], function () {
+    \UniSharp\LaravelFilemanager\Lfm::routes();});

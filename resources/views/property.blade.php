@@ -38,7 +38,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="row">
-                                <h5>{{$property->description}}</h5>
+                                <h5>{{$property->details}}</h5>
                             </div>
                         
                             <div class="row">
@@ -64,7 +64,9 @@
                                     <img src="img/rooms/garage.png" alt="">
                                     <span>{{$property->parking}}</span>
                                 </div>
-                                
+                                <p>
+                                    {!!$property->description!!}
+                                </p>
                                
                             
                             </div>

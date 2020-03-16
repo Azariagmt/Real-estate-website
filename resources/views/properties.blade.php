@@ -7,7 +7,7 @@
 	</div>
 	
 	<!-- Header section -->
-	<header class="header-section" style="background-color:grey;">
+	<header class="header-section" style="background-color:#353649;">
 		<!-- logo -->
 		<a href="{{route('landing-page')}}" class="site-logo">
 			<img src="img/logo.png" alt="">
@@ -17,8 +17,17 @@
 		</div>
 		<div class="container">
 			<ul class="main-menu">
-                <li><a href="{{route('about')}}">About Us</a></li>
-				<li><a href="{{route('contact')}}">Contact</a></li>
+                <div class="col-md-6" style="float:left;">
+                    <li><a href="{{route('about')}}">About Us</a></li>
+                    <li><a href="{{route('contact')}}">Contact</a></li>
+                </div>
+                <!-- <div class="clear-fix" style="clear:both;"></div>
+                <div class="col-md-6"style="float:right;">
+                        <a href=""><i class="fa fa-facebook"></i></a>
+							<a href=""><i class="fa fa-linkedin"></i></a>
+							<a href=""><i class="fa fa-twitter"></i></a>
+							<a href=""><i class="fa fa-instagram"></i></a>
+                </div> -->
 			</ul>
 		</div>
 	</header>

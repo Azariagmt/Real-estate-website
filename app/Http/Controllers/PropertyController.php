@@ -29,4 +29,8 @@ class PropertyController extends Controller
             'property'=> $property
         ]);
     }
+
+    public function getSellingPage(){
+        return view('selling');
+    }
 }
