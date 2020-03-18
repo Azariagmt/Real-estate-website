@@ -44,20 +44,38 @@
 	<section class="hero-section">
 		@include('partials.hero-social')
 		<div class="hero-slider owl-carousel owl-theme">
-			
-			@foreach($propertiesForHeader as $property)
-				<div class="hs-item set-bg" data-setbg="img/slider/1.jpg">
-					<div class="container">
-						<div class="row">
-							<div class="col-xl-6 col-lg-7">
-								<h2>{{$property->description}} </h2>
-									
-							</div>
+			@foreach($properties as $property)
+			<div class="hs-item set-bg" data-setbg="img/slider/1.jpg">
+				<div class="container">
+					<div class="row">
+						<div class="col-xl-6 col-lg-7">
+                            <h2>{{$property->description}} </h2>
+                                
 						</div>
 					</div>
 				</div>
+			</div>
 			@endforeach
-			
+			<div class="hs-item set-bg" data-setbg="img/slider/2.jpg">
+				<div class="container">
+					<div class="row">
+						<div class="col-xl-6 col-lg-7">
+                            <h2>Houses to pass on for generations. </h2>
+                         
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="hs-item set-bg" data-setbg="img/slider/3.jpg">
+				<div class="container">
+					<div class="row">
+						<div class="col-xl-6 col-lg-7">
+                            <h2>Step into your future today. </h2>
+                           
+						</div>
+					</div>
+				</div>
+			</div>
         </div>
         
 		<!-- Hero details slider -->
@@ -112,10 +130,8 @@
 				<h2>Feautured houses</h2>
 			</div>
 			<div class="row">
-
-			@foreach($properties as $property)
 			<div class="col-lg-4 col-md-6">
-                  
+                    @foreach($properties as $property)
 					<div class="row" data-setbg="{{ asset('img/property-gallery/1.jpg')}}" style="background-image: {{ asset('img/property-gallery/1.jpg') }};">
 				   <a href="{{route('property-selected', $property->slug) }}"> <img src="{{ asset('img/property-gallery/'.$property->slug.'.jpg') }}"></a>
 						<a href="#" class="room-content">

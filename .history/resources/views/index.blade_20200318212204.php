@@ -45,17 +45,17 @@
 		@include('partials.hero-social')
 		<div class="hero-slider owl-carousel owl-theme">
 			
-			@foreach($propertiesForHeader as $property)
-				<div class="hs-item set-bg" data-setbg="img/slider/1.jpg">
-					<div class="container">
-						<div class="row">
-							<div class="col-xl-6 col-lg-7">
-								<h2>{{$property->description}} </h2>
-									
-							</div>
+		@foreach($properties as $property)
+			<div class="hs-item set-bg" data-setbg="img/slider/1.jpg">
+				<div class="container">
+					<div class="row">
+						<div class="col-xl-6 col-lg-7">
+                            <h2>{{$property->description}} </h2>
+                                
 						</div>
 					</div>
 				</div>
+			</div>
 			@endforeach
 			
         </div>

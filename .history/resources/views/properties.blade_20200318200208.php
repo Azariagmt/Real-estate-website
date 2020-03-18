@@ -18,7 +18,7 @@
 		</div>
 		<div class="container">
 			<ul class="main-menu">
-            @include('partials.nav')
+
                 <!-- <div class="col-md-6" style="float:left;">
                     <li><a href="{{route('about')}}">About Us</a></li>
                     <li><a href="{{route('contact')}}">Contact</a></li>

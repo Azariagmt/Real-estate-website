@@ -317,7 +317,7 @@ Header section
 	margin-right: 50px;
 }
 
-.main-menu {
+/* .main-menu {
 	list-style: none;
 }
 
@@ -328,16 +328,15 @@ Header section
 .main-menu li a {
 	display: block;
 	font-size: 18px;
+	color: #fff;
 	margin-right: 60px;
 	padding: 5px 5px;
 	margin-left: 50px;
 }
-.dropdown-item{
-	margin-left:0px !important;
-}
+
 .main-menu li::last-child a {
 	margin-right: 0;
-}
+} */
 
 .nav-switch {
 	display: none;

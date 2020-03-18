@@ -45,7 +45,7 @@
 		@include('partials.hero-social')
 		<div class="hero-slider owl-carousel owl-theme">
 			
-			@foreach($propertiesForHeader as $property)
+			@foreach($properties as $property)
 				<div class="hs-item set-bg" data-setbg="img/slider/1.jpg">
 					<div class="container">
 						<div class="row">

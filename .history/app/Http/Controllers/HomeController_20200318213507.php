@@ -10,6 +10,8 @@ use App\Type;
 
 class HomeController extends Controller
 {
+
+
     public function getIndex(){
              $propertiesForHeader =Property::where('featured', true)->take(3)->inRandomOrder()->get();
              $properties =Property::where('featured', true)->take(8)->inRandomOrder()->get();
@@ -19,7 +21,7 @@ class HomeController extends Controller
         return view('index',[
             'status'=>$status,
             'type'=>$type,
-            'propertiesForHeader'=>$propertiesForHeader,
+            'propertiesF'
             'properties'=>$properties,
             'location'=>$location
         ]);
