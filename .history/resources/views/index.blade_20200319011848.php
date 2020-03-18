@@ -72,7 +72,7 @@
 					</div>
 					@endforeach
 					
-				</div>
+				</div>git
 			</div>
 		</div>
 	</section>

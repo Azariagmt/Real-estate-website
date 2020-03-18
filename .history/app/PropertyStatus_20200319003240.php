@@ -4,9 +4,8 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class LocationProperty extends Model
+class PropertyStatus extends Model
 {
-    protected $table ='location_property';
-    
+    protected $table ='property_status';
     protected $fillable =['property_id', 'location_id'];
 }

@@ -66,7 +66,7 @@
 				<div class="hero-nav-slider owl-carousel">
 				@foreach($properties as $property)
 					<div class="hns-item">
-						<h5>{{$property->bedrooms}} Bedrooms</h5>
+						<h5>{{$property->bedrooms}} </h5>
 						<p>{{$property->details}}</p>
 						<span>{{$property->presentPrice()}}</span>
 					</div>
