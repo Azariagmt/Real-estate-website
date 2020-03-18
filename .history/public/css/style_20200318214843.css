@@ -330,7 +330,7 @@ Header section
 	font-size: 18px;
 	margin-right: 60px;
 	padding: 5px 5px;
-	padding-left: 50px !important;
+	padding-left: 50px;
 	height:100%;
 	width:100%;
 }
