@@ -6,24 +6,17 @@ use Illuminate\Http\Request;
 use App\Property;
 use App\Status;
 use App\Location;
-use App\Type;
 
 class PropertyController extends Controller
 {
     public function getPropertiesPage(){
         if(request()->location){
-            // $properties = Property::with('locations')->whereHas('locations', function($query){
-            //     $query->where('slug', request()->location);
-            // })->get();
             $properties = Property::with('locations')->whereHas('locations', function($query){
                 $query->where('slug', request()->location);
             })->get();
             $locations = Location::all();
             $categoryName= $locations->where('slug', request()->location)->first()->name;
         }else if(request()->status){
-            // $properties = Property::with('statuses')->whereHas('statuses', function($query){
-            //     $query->where('slug', request()->status);
-            // })->get();
             $properties = Property::with('statuses')->whereHas('statuses', function($query){
                 $query->where('slug', request()->status);
             })->get();
@@ -50,7 +43,6 @@ class PropertyController extends Controller
          
         return view('properties',
     [
-        'categoryName'=>$categoryName,
         'properties' => $properties
     ]);
     }

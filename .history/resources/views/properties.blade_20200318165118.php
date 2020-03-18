@@ -45,7 +45,7 @@
 <br>
             <div class="row">
 
-            @forelse($properties as $property)
+            @foreach($properties as $property)
                <div class="col-lg-4 col-md-6">
                     
                         <div class="row" data-setbg="{{ asset('img/property-gallery/1.jpg')}}" style="background-image: {{ asset('img/property-gallery/1.jpg') }};">
@@ -107,11 +107,7 @@
                     </div>
                      <hr>
                 </div>
-                @empty
-                <div>
-                No properties found.
-                </div>
-                @endforelse
+                @endforeach
             </div>
         </div>
     </section>

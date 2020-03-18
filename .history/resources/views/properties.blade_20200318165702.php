@@ -108,9 +108,6 @@
                      <hr>
                 </div>
                 @empty
-                <div>
-                No properties found.
-                </div>
                 @endforelse
             </div>
         </div>

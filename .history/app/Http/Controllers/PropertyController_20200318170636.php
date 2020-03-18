@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 use App\Property;
 use App\Status;
 use App\Location;
-use App\Type;
 
 class PropertyController extends Controller
 {
@@ -16,7 +15,7 @@ class PropertyController extends Controller
             //     $query->where('slug', request()->location);
             // })->get();
             $properties = Property::with('locations')->whereHas('locations', function($query){
-                $query->where('slug', request()->location);
+                $query->where('slug', request()->slocation);
             })->get();
             $locations = Location::all();
             $categoryName= $locations->where('slug', request()->location)->first()->name;

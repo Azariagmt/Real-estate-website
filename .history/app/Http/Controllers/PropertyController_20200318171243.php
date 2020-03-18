@@ -7,7 +7,6 @@ use App\Property;
 use App\Status;
 use App\Location;
 use App\Type;
-
 class PropertyController extends Controller
 {
     public function getPropertiesPage(){

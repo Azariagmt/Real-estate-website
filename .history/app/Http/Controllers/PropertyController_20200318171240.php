@@ -6,8 +6,7 @@ use Illuminate\Http\Request;
 use App\Property;
 use App\Status;
 use App\Location;
-use App\Type;
-
+use App\
 class PropertyController extends Controller
 {
     public function getPropertiesPage(){

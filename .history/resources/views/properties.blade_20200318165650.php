@@ -107,11 +107,7 @@
                     </div>
                      <hr>
                 </div>
-                @empty
-                <div>
-                No properties found.
-                </div>
-                @endforelse
+                @endforeach
             </div>
         </div>
     </section>

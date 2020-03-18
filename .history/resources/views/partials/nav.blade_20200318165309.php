@@ -77,7 +77,7 @@
         </div>
       </li>
       <li>
-      <a href="{{route('property')}}" style="font-size:8px; background-color:orange;">View all <br>Properties</a>
+      <a>View all Properties</a>
       </li>
       <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">

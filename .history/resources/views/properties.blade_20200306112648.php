@@ -35,9 +35,6 @@
 <section class="hotel-rooms spad">
         <div class="container">
         <div class="row">
-        <h3>Filtered by {{$categoryName}}</h3>
-        </div>
-        <div class="row">
 <strong>Price: &nbsp;</strong>
 <a href="{{route('property',[ 'sort'=>'low_high'])}}">Low to High</a> &nbsp;|&nbsp;
 <a href="{{route('property',[ 'sort'=>'high_low'])}}">High to Low</a>
@@ -45,7 +42,7 @@
 <br>
             <div class="row">
 
-            @forelse($properties as $property)
+            @foreach($properties as $property)
                <div class="col-lg-4 col-md-6">
                     
                         <div class="row" data-setbg="{{ asset('img/property-gallery/1.jpg')}}" style="background-image: {{ asset('img/property-gallery/1.jpg') }};">
@@ -107,11 +104,7 @@
                     </div>
                      <hr>
                 </div>
-                @empty
-                <div>
-                No properties found.
-                </div>
-                @endforelse
+                @endforeach
             </div>
         </div>
     </section>

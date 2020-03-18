@@ -76,9 +76,7 @@
          @endforeach
         </div>
       </li>
-      <li>
-      <a href="{{route('property')}}" style="font-size:8px; background-color:orange;">View all <br>Properties</a>
-      </li>
+      
       <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>

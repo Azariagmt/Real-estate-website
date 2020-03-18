@@ -107,10 +107,7 @@
                     </div>
                      <hr>
                 </div>
-                @empty
-                <div>
-                No properties found.
-                </div>
+                @empty{}
                 @endforelse
             </div>
         </div>

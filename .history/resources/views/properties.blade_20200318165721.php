@@ -109,7 +109,7 @@
                 </div>
                 @empty
                 <div>
-                No properties found.
+                No 
                 </div>
                 @endforelse
             </div>
