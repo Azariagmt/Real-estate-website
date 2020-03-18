@@ -15,17 +15,15 @@
             <div class="row">
               <div class="col-md-6">
                   <div class="row ">
-             
-          
-
-                   <div class="" >
-                      <a href="tel:+251-910-697-186" class="nav-link text-white">         <i class=" text-white fa fa-phone"></i> +251-910-697-186</a>
+                      <div class="" >
+                    
+                      <a href="tel:+251-910-697-186" class="nav-link text-white">+251-910-697-186</a>
                               </div>
-                  
+                      </div>
                       <div class="">
-                      
-                                  <a href="tel:+251-910-697-186" class="nav-link text-white">          <i class=" text-white fa fa-phone"></i>+251-910-697-186</a>
-                  
+                          <div class="row">
+                                  <a href="tel:+251-910-697-186" class="nav-link text-white">+251-910-697-186</a>
+                          </div>
                       </div>
                 </div>
               </div>

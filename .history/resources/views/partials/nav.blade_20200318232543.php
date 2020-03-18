@@ -14,20 +14,18 @@
             <li class="nav-item ">
             <div class="row">
               <div class="col-md-6">
-                  <div class="row ">
-             
-          
+                <div class="row ">
+                    <div class="" >
+                            <a class="nav-link text-white" href="#"><i class="fa fa-phone" aria-hidden="true"></i> Call Us +251 91 697 186</a>
+                    </div>
+                    <div class="">
+                        <div class="row">
 
-                   <div class="" >
-                      <a href="tel:+251-910-697-186" class="nav-link text-white">         <i class=" text-white fa fa-phone"></i> +251-910-697-186</a>
-                              </div>
-                  
-                      <div class="">
-                      
-                                  <a href="tel:+251-910-697-186" class="nav-link text-white">          <i class=" text-white fa fa-phone"></i>+251-910-697-186</a>
-                  
-                      </div>
-                </div>
+                                <a class="nav-link text-white" href="#"> | +251 91 697 186</a>
+                                <a href="tel:+251-941-924-816">+251-941-924-816</a>
+                        </div>
+                    </div>
+              </div>
               </div>
               <div class="col-md-6 float-left">
                <div class="row " style="background-color:orange;">

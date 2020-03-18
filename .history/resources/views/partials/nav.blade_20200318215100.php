@@ -14,28 +14,30 @@
             <li class="nav-item ">
             <div class="row">
               <div class="col-md-6">
-                  <div class="row ">
-             
-          
+                <div class="row ">
+                    <div class="" >
+                            <a class="nav-link text-white" href="#"><i class="fa fa-phone" aria-hidden="true"></i> Call Us +251 91 697 186</a>
+                    </div>
+                    <div class="">
+                        <div class="row">
 
-                   <div class="" >
-                      <a href="tel:+251-910-697-186" class="nav-link text-white">         <i class=" text-white fa fa-phone"></i> +251-910-697-186</a>
-                              </div>
-                  
-                      <div class="">
-                      
-                                  <a href="tel:+251-910-697-186" class="nav-link text-white">          <i class=" text-white fa fa-phone"></i>+251-910-697-186</a>
-                  
-                      </div>
-                </div>
+                                <a class="nav-link text-white" href="#"> | +251 91 697 186</a>
+                        </div>
+                    </div>
+              </div>
               </div>
               <div class="col-md-6 float-left">
-               <div class="row " style="background-color:orange;">
-                  <div class="" >
-                          <a class="nav-link text-white mx-auto" href="#"><i class="fa fa-sale" aria-hidden="true"></i> Ad spot</a>
-                  </div>
-                 
-              </div>
+           <div class="row ">
+                <div class="" >
+                        <a class="nav-link text-white mx-auto" href="#"><i class="fa fa-user" aria-hidden="true"></i> Login</a>
+                </div>
+                <div class="float-right">
+                    <div class="row">
+
+                            <a class="nav-link text-white" href="#"> | +251 91 697 186</a>
+                    </div>
+                </div>
+           </div>
 </div></div>
             </li>
             
@@ -74,8 +76,8 @@
          @endforeach
         </div>
       </li>
-      <li >
-      <a href="{{route('property')}}" style="font-size:12px;  font-weight:bold; background-color:#cfd8dc;">View all <br>Properties</a>
+      <li style="width">
+      <a href="{{route('property')}}" style="font-size:11px; background-color:orange;">View all <br>Properties</a>
       </li>
       <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
