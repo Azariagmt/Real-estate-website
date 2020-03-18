@@ -52,9 +52,7 @@ class PropertyController extends Controller
         }else{
             $properties =$properties->paginate(9);
         }
-        $location =Location::all();
-        $status = Status::all();
-        $type = Type::all();
+       
         
         return view('properties',
     [

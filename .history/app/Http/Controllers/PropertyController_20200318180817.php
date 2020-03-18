@@ -43,6 +43,9 @@ class PropertyController extends Controller
         }else{
             $properties = Property::take(12);
             $categoryName = 'All Properties';
+            $location =Location::all();
+            $status = Status::all();
+            $type = Type::all();
         }
 
         if(request()->sort == 'low_high'){
@@ -52,9 +55,7 @@ class PropertyController extends Controller
         }else{
             $properties =$properties->paginate(9);
         }
-        $location =Location::all();
-        $status = Status::all();
-        $type = Type::all();
+       
         
         return view('properties',
     [

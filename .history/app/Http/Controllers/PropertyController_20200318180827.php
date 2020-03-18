@@ -37,12 +37,17 @@ class PropertyController extends Controller
             $properties = Property::with('types')->whereHas('types', function($query){
                 $query->where('slug', request()->type);
             });
-            $types =Type::all();
+            $location =Location::all();
+            $status = Status::all();
+            $type = Type::all();
             $categoryName= optional($types->where('slug', request()->type)->first())->name;
 
         }else{
             $properties = Property::take(12);
             $categoryName = 'All Properties';
+            $location =Location::all();
+            $status = Status::all();
+            $type = Type::all();
         }
 
         if(request()->sort == 'low_high'){
@@ -52,9 +57,7 @@ class PropertyController extends Controller
         }else{
             $properties =$properties->paginate(9);
         }
-        $location =Location::all();
-        $status = Status::all();
-        $type = Type::all();
+       
         
         return view('properties',
     [

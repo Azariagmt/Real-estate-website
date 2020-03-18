@@ -37,7 +37,7 @@ class PropertyController extends Controller
             $properties = Property::with('types')->whereHas('types', function($query){
                 $query->where('slug', request()->type);
             });
-            $types =Type::all();
+
             $categoryName= optional($types->where('slug', request()->type)->first())->name;
 
         }else{
