@@ -13,14 +13,14 @@ class HomeController extends Controller
 
 
     public function getIndex(){
-             $properties =Property::where('featured', 'true')->take(4)->inRandomOrder()->get();
+        $property =Property::where('featured', 'true')()->take(12)->get();
             $location =Location::all();
             $status = Status::all();
             $type = Type::all();
         return view('index',[
             'status'=>$status,
             'type'=>$type,
-            'properties'=>$properties,
+            'property'=>$property,
             'location'=>$location
         ]);
     }

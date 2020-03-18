@@ -7,57 +7,50 @@ use App\Property;
 use App\Status;
 use App\Location;
 use App\Type;
-use Paginate;
+use Pa
 
 class PropertyController extends Controller
 {
     public function getPropertiesPage(){
-
-        
         if(request()->location){
             // $properties = Property::with('locations')->whereHas('locations', function($query){
             //     $query->where('slug', request()->location);
             // })->get();
             $properties = Property::with('locations')->whereHas('locations', function($query){
                 $query->where('slug', request()->location);
-            });
-            $categoryName= optional($locations->where('slug', request()->location)->first())->name;
+            })->get();
+            $locations = Location::all();
+            $categoryName= $locations->where('slug', request()->location)->first()->name;
         }else if(request()->status){
             // $properties = Property::with('statuses')->whereHas('statuses', function($query){
             //     $query->where('slug', request()->status);
             // })->get();
             $properties = Property::with('statuses')->whereHas('statuses', function($query){
                 $query->where('slug', request()->status);
-            });
-            $categoryName= optional($statuses->where('slug', request()->status)->first())->name;
+            })->get();
+            $statuses = Status::all();
+            $categoryName= $statuses->where('slug', request()->status)->first()->name;
 
         }else if(request()->type){
             $properties = Property::with('types')->whereHas('types', function($query){
                 $query->where('slug', request()->type);
-            });
-            $categoryName= optional($types->where('slug', request()->type)->first())->name;
+            })->get();
+            $types =Type::all();
+            $categoryName= $types->where('slug', request()->type)->first()->name;
 
         }else{
-            $properties = Property::take(12);
+            $properties = Property::all()->paginate(32);
             $categoryName = 'All Properties';
         }
 
         if(request()->sort == 'low_high'){
-            $properties =$properties->orderBy('price')->paginate(9);
+            $properties =$properties->sortBy('price');
         }elseif(request()->sort =='high_low'){
-            $properties =$properties->orderBy('price', 'desc')->paginate(9);
-        }else{
-            $properties =$properties->paginate(9);
+            $properties =$properties->sortByDesc('price');
         }
-        $location =Location::all();
-        $status = Status::all();
-        $type = Type::all();
-        
+         
         return view('properties',
     [
-        'status'=>$status,
-        'type'=>$type,
-        'location'=>$location,
         'categoryName'=>$categoryName,
         'properties' => $properties
     ]);

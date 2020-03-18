@@ -7,7 +7,7 @@
 	</div>
 	
 	<!-- Header section -->
-    @include('partials.nav')
+    
 	<header class="header-section" style="background-color:#353649;">
 		<!-- logo -->
 		<a href="{{route('landing-page')}}" class="site-logo">

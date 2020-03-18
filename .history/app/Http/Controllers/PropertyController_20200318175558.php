@@ -21,6 +21,7 @@ class PropertyController extends Controller
             $properties = Property::with('locations')->whereHas('locations', function($query){
                 $query->where('slug', request()->location);
             });
+            $locations = Location::all();
             $categoryName= optional($locations->where('slug', request()->location)->first())->name;
         }else if(request()->status){
             // $properties = Property::with('statuses')->whereHas('statuses', function($query){

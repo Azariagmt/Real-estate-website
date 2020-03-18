@@ -7,7 +7,6 @@
 	</div>
 	
 	<!-- Header section -->
-    @include('partials.nav')
 	<header class="header-section" style="background-color:#353649;">
 		<!-- logo -->
 		<a href="{{route('landing-page')}}" class="site-logo">
@@ -114,7 +113,7 @@
                 </div>
                 @endforelse
 
-                {{ $properties->appends(request()->input())->links() }}
+                {{ $properties->links() }}
             </div>
         </div>
     </section>

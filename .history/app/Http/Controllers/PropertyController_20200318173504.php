@@ -12,8 +12,6 @@ use Paginate;
 class PropertyController extends Controller
 {
     public function getPropertiesPage(){
-
-        
         if(request()->location){
             // $properties = Property::with('locations')->whereHas('locations', function($query){
             //     $query->where('slug', request()->location);
@@ -21,7 +19,8 @@ class PropertyController extends Controller
             $properties = Property::with('locations')->whereHas('locations', function($query){
                 $query->where('slug', request()->location);
             });
-            $categoryName= optional($locations->where('slug', request()->location)->first())->name;
+            $locations = Location::all();
+            $categoryName= $locations->where('slug', request()->location)->first()->name;
         }else if(request()->status){
             // $properties = Property::with('statuses')->whereHas('statuses', function($query){
             //     $query->where('slug', request()->status);
@@ -29,13 +28,15 @@ class PropertyController extends Controller
             $properties = Property::with('statuses')->whereHas('statuses', function($query){
                 $query->where('slug', request()->status);
             });
-            $categoryName= optional($statuses->where('slug', request()->status)->first())->name;
+            $statuses = Status::all();
+            $categoryName= $statuses->where('slug', request()->status)->first()->name;
 
         }else if(request()->type){
             $properties = Property::with('types')->whereHas('types', function($query){
                 $query->where('slug', request()->type);
             });
-            $categoryName= optional($types->where('slug', request()->type)->first())->name;
+            $types =Type::all();
+            $categoryName= $types->where('slug', request()->type)->first()->name;
 
         }else{
             $properties = Property::take(12);
@@ -49,15 +50,9 @@ class PropertyController extends Controller
         }else{
             $properties =$properties->paginate(9);
         }
-        $location =Location::all();
-        $status = Status::all();
-        $type = Type::all();
-        
+         
         return view('properties',
     [
-        'status'=>$status,
-        'type'=>$type,
-        'location'=>$location,
         'categoryName'=>$categoryName,
         'properties' => $properties
     ]);

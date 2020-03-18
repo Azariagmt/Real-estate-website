@@ -52,7 +52,7 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             @foreach($location as $location )
-            <a class="dropdown-item {{request()->location == $location->slug?'active':''}}" href="{{route('property' , ['location'=>$location->slug] )}}">{{$location->name}}</a>
+            <a class="dropdown-item {{request()-}}" href="{{route('property' , ['location'=>$location->slug] )}}">{{$location->name}}</a>
             @endforeach
         </div>
       </li>
@@ -62,7 +62,7 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
          @foreach($type as $type)
-          <a class="dropdown-item {{request()->type == $type->slug?'active':''}}" href="{{route('property', ['type'=>$type->slug])}}">{{$type->name}}</a>
+          <a class="dropdown-item" href="{{route('property', ['type'=>$type->slug])}}">{{$type->name}}</a>
          @endforeach
         </div>
       </li>
@@ -72,7 +72,7 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
          @foreach($status as $status)
-          <a class="dropdown-item {{request()->status == $status->slug?'active':''}}" href="{{route('property', ['status'=>$status->slug])}}">{{$status->name}}</a>
+          <a class="dropdown-item" href="{{route('property', ['status'=>$status->slug])}}">{{$status->name}}</a>
          @endforeach
         </div>
       </li>
