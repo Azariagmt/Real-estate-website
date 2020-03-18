@@ -72,7 +72,7 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
          @foreach($status as $status)
-          <a class="dropdown-item" href="{{route('property', ['status'=>$status->slug])}}">{{$status->name}}</a>
+          <a class="dropdown-item" href="{{route('property', ['status'=>])}}">{{$status->name}}</a>
          @endforeach
         </div>
       </li>
