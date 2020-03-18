@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-none fixed-top mx-auto" >
+<nav class="navbar navbar-expand-lg navbar-light bg-primary fixed-top mx-auto" >
     <a href="{{route('landing-page')}}" class="site-logo navbar-brand">
 			<img src="img/yenebet-logo.png" alt="" class="img-fluid" width="60px">
 		</a>
