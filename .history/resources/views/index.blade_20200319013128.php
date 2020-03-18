@@ -165,7 +165,7 @@
 							<br>
 						
 							<div class="row">
-								<div class="col-md-6">
+								<div class="col-md-6">git
 									<span>{{$property->presentprice()}}</span>
 								</div>
 								<div class="col-md-6">

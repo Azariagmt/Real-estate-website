@@ -115,8 +115,6 @@
 
 			@foreach($properties as $property)
 			<div class="col-lg-6 col-md-6">
-			<div class="container">
-			<div class="row" style="margin-bottom:60px;">
                   <div class="col-md-6">
 						<div class="row" data-setbg="{{ asset('img/property-gallery/1.jpg')}}" style="background-image: {{ asset('img/property-gallery/1.jpg') }};">
 							<a href="{{route('property-selected', $property->slug) }}"> <img src="{{ asset('img/property-gallery/'.$property->slug.'.jpg') }}"></a>
@@ -124,8 +122,8 @@
 								<i class="flaticon-heart"></i>
 							</a>
 						</div>
-				</div>
-				
+					</div>
+					<hr>
 					<div class="col-md-6">
 					<div class="row">
 						<div class="col-md-12">
@@ -166,6 +164,7 @@
 						
 							<div class="row">
 								<div class="col-md-6">
+									<p>For Sale</p>
 									<span>{{$property->presentprice()}}</span>
 								</div>
 								<div class="col-md-6">
@@ -177,9 +176,6 @@
 				</div>
 				 <hr>
 			</div>
-			</div>
-			</div>
-
 			@endforeach
 				
 			</div>

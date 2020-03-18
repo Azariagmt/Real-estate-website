@@ -166,6 +166,7 @@
 						
 							<div class="row">
 								<div class="col-md-6">
+									<p>For Sale</p>
 									<span>{{$property->presentprice()}}</span>
 								</div>
 								<div class="col-md-6">

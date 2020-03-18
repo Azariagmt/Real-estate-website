@@ -116,7 +116,7 @@
 			@foreach($properties as $property)
 			<div class="col-lg-6 col-md-6">
 			<div class="container">
-			<div class="row" style="margin-bottom:60px;">
+			<div class="row" style="margin-bottom:">
                   <div class="col-md-6">
 						<div class="row" data-setbg="{{ asset('img/property-gallery/1.jpg')}}" style="background-image: {{ asset('img/property-gallery/1.jpg') }};">
 							<a href="{{route('property-selected', $property->slug) }}"> <img src="{{ asset('img/property-gallery/'.$property->slug.'.jpg') }}"></a>
@@ -166,6 +166,7 @@
 						
 							<div class="row">
 								<div class="col-md-6">
+									<p>For Sale</p>
 									<span>{{$property->presentprice()}}</span>
 								</div>
 								<div class="col-md-6">
