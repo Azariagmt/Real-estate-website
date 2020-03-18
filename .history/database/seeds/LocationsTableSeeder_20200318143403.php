@@ -1,0 +1,28 @@
+<?php
+
+use App\Location;
+use Carbon\Carbon;
+use Illuminate\Database\Seeder;
+
+class LocationsTableSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        $now = Carbon::now()->toDateTimeString();
+
+        Location::insert([
+            ['name' => 'Bole', 'slug' => 'Bole', 'created_at' => $now, 'updated_at' => $now],
+            ['name' => 'Gerji', 'slug' => 'Gerji', 'created_at' => $now, 'updated_at' => $now],
+            ['name' => 'Mobile Phones', 'slug' => 'mobile-phones', 'created_at' => $now, 'updated_at' => $now],
+            ['name' => 'Tablets', 'slug' => 'tablets', 'created_at' => $now, 'updated_at' => $now],
+            ['name' => 'TVs', 'slug' => 'tvs', 'created_at' => $now, 'updated_at' => $now],
+            ['name' => 'Digital Cameras', 'slug' => 'digital-cameras', 'created_at' => $now, 'updated_at' => $now],
+            ['name' => 'Appliances', 'slug' => 'appliances', 'created_at' => $now, 'updated_at' => $now],
+        ]);
+    }
+}
