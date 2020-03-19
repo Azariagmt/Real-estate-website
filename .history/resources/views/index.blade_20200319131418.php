@@ -46,7 +46,7 @@
 		<div class="hero-slider owl-carousel owl-theme">
 			
 			@foreach($propertiesForHeader as $property)
-				<div class="hs-item set-bg" data-setbg="{{asset('storage/'. $property->image)}}">
+				<div class="hs-item set-bg" data-setbg="{{ propertyImage($property->image)}}">
 					<div class="container">
 						<div class="row">
 							<div class="col-xl-6 col-lg-7">
@@ -119,7 +119,7 @@
 			<div class="row" style="margin-bottom:60px;">
                   <div class="col-md-6">
 						<div class="row" data-setbg="{{ asset('img/property-gallery/1.jpg')}}" style="background-image: {{ asset('img/property-gallery/1.jpg') }};">
-							<a href="{{route('property-selected', $property->slug) }}"> <img src="{{asset('storage/'. $property->image)}}" alt="{{$property->slug}}"></a>
+							<a href="{{route('property-selected', $property->slug) }}"> <img src="{{propertyImage($property->image)}}" alt="{{$property->slug}}"></a>
 								<a href="#" class="room-content">
 								<i class="flaticon-heart"></i>
 							</a>

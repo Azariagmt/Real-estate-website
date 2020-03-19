@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-none fixed-top mx-auto" >
-    <a href="{{route('landing-page')}}" class="site-logo navbar-brand" style="margin-left:30px;">
+    <a href="{{route('landing-page')}}" class="site-logo navbar-brand" style="">
 			<img src="img/yenebet-logo.png" alt="" class="img-fluid" width="60px">
 		</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

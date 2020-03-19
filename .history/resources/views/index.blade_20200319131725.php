@@ -131,7 +131,7 @@
 						<div class="col-md-12">
 							<div class="row">
 								<a href="{{route('property-selected', $property->slug) }}">
-									<h5>{{$property->description}}</h5></a>
+								<h5>{{$property->description}}</h5></a>
 							</div>
 						
 							<div class="row">

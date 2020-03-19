@@ -119,7 +119,7 @@
 			<div class="row" style="margin-bottom:60px;">
                   <div class="col-md-6">
 						<div class="row" data-setbg="{{ asset('img/property-gallery/1.jpg')}}" style="background-image: {{ asset('img/property-gallery/1.jpg') }};">
-							<a href="{{route('property-selected', $property->slug) }}"> <img src="{{asset('storage/'. $property->image)}}" alt="{{$property->slug}}"></a>
+							<a href="{{route('property-selected', $property->slug) }}"> <img src="{{propertyImage$property->image)}}" alt="{{$property->slug}}"></a>
 								<a href="#" class="room-content">
 								<i class="flaticon-heart"></i>
 							</a>

@@ -18,7 +18,7 @@ class Property extends Model
     public function presentPrice(){
         return number_format($this->price ,2).' ETB';
     }
-    public function propertyImage($path){
-        return ($path != null) && file_exists('storage/'.$path) ? asset('storage/'.$path) : asset('img/not-found.jpg');
+    public function propertyImage(){
+        
     }
 }
