@@ -156,10 +156,7 @@
 			@endforeach
 				
 			</div>
-			<div class="row" style="margin-bottom:60px;">
-			<a type="button" href="{{route('property')}}" class="btn btn-lg btn-outline-dark mx-auto " id="btn-view-products" style="margin-top:15px;">  View more properties</a>
-
-			</div>
+			
 		</div>
 	</section>
 	<!-- Intro section end-->

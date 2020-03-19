@@ -42,7 +42,7 @@
 			<div class="copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Yenebet
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
- <span style="color:grey;">site by </span><a href="http:\\azariagmt.github.io" target="_blank">Azaria</a>
+ site by <a href="azariagmt.github.io" target="">Azaria</a>
 		</div>
 	</footer>
 	<!-- Footer section end-->

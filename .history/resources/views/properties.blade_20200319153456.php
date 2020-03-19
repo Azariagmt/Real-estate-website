@@ -1,12 +1,7 @@
 @extends('master')
-@section('extra-styles')
+@section('styles')
 <style>
-.spad{
-    margin-top:50px;
-}
-.navbar{
-    background-color:#353649;
-}
+.spad
 </style>
 @endsection
 @section('content')
@@ -18,27 +13,29 @@
 	
 	<!-- Header section -->
    
-	<header class="header-section">
+	<header class="header-section" style="background-color:#353649;">
+
             @include('partials.nav')
 	</header>
 
 <section class="hotel-rooms spad">
         <div class="container">
+        <div class="row">
+        <h3>Filtered by {{$categoryName}}</h3>
+        </div>
+        <div class="row">
+<strong>Price: &nbsp;</strong>
+<a href="{{route('property',[ 'sort'=>'low_high'])}}">Low to High</a> &nbsp;|&nbsp;
+<a href="{{route('property',[ 'sort'=>'high_low'])}}">High to Low</a>
+</div>
+<br>
             <div class="row">
-                <h3>Filtered by {{$categoryName}}</h3>
-            </div>
-            <div class="row">
-                <strong>Price: &nbsp;</strong>
-                <a href="{{route('property',[ 'sort'=>'low_high'])}}">Low to High</a> &nbsp;|&nbsp;
-                <a href="{{route('property',[ 'sort'=>'high_low'])}}">High to Low</a>
-            </div>
-            <br>
-            <div class="row">
+
             @forelse($properties as $property)
                <div class="col-lg-4 col-md-6">
                     
                         <div class="row" data-setbg="{{ asset('img/property-gallery/1.jpg')}}" style="background-image: {{ asset('img/property-gallery/1.jpg') }};">
-                            <a href="{{route('property-selected', $property->slug) }}"> <img src="{{asset('storage/'. $property->image)}}" alt="{{$property->slug}}"></a>
+                       <a href="{{route('property-selected', $property->slug) }}"> <img src="{{asset('storage/'. $property->image)}}" alt="{{$property->slug}}"></a>
                             <a href="#" class="room-content">
                                 <i class="flaticon-heart"></i>
                             </a>
@@ -51,7 +48,9 @@
                                 <a href="{{route('property-selected', $property->slug) }}">
                                     <h5>{{$property->description}}</h5></a>
                                 </div>
+                            
                                 <div class="row">
+                              
                                     <div class="col-md-3">
                                         <p>Lot Size</p>
                                         <img src="img/rooms/size.png" alt="">
@@ -73,6 +72,9 @@
                                         <img src="img/rooms/garage.png" alt="">
                                         <span>{{$property->parking}}</span>
                                     </div>
+                                    
+                                   
+                                
                                 </div>
                                 <hr>
                                 <br>

@@ -32,7 +32,7 @@
                 <a href="{{route('property',[ 'sort'=>'low_high'])}}">Low to High</a> &nbsp;|&nbsp;
                 <a href="{{route('property',[ 'sort'=>'high_low'])}}">High to Low</a>
             </div>
-            <br>
+        <br>
             <div class="row">
             @forelse($properties as $property)
                <div class="col-lg-4 col-md-6">

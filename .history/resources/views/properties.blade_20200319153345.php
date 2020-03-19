@@ -1,14 +1,4 @@
 @extends('master')
-@section('extra-styles')
-<style>
-.spad{
-    margin-top:50px;
-}
-.navbar{
-    background-color:#353649;
-}
-</style>
-@endsection
 @section('content')
 
 	<!-- Page Preloder -->
@@ -18,27 +8,42 @@
 	
 	<!-- Header section -->
    
-	<header class="header-section">
+	<header class="header-section" style="background-color:#353649;">
+
             @include('partials.nav')
+                <!-- <div class="col-md-6" style="float:left;">
+                    <li><a href="{{route('about')}}">About Us</a></li>
+                    <li><a href="{{route('contact')}}">Contact</a></li>
+                </div> -->
+                <!-- <div class="clear-fix" style="clear:both;"></div>
+                <div class="col-md-6"style="float:right;">
+                        <a href=""><i class="fa fa-facebook"></i></a>
+							<a href=""><i class="fa fa-linkedin"></i></a>
+							<a href=""><i class="fa fa-twitter"></i></a>
+							<a href=""><i class="fa fa-instagram"></i></a>
+                </div> -->
+			</ul>
+		</div>
 	</header>
 
 <section class="hotel-rooms spad">
         <div class="container">
+        <div class="row">
+        <h3>Filtered by {{$categoryName}}</h3>
+        </div>
+        <div class="row">
+<strong>Price: &nbsp;</strong>
+<a href="{{route('property',[ 'sort'=>'low_high'])}}">Low to High</a> &nbsp;|&nbsp;
+<a href="{{route('property',[ 'sort'=>'high_low'])}}">High to Low</a>
+</div>
+<br>
             <div class="row">
-                <h3>Filtered by {{$categoryName}}</h3>
-            </div>
-            <div class="row">
-                <strong>Price: &nbsp;</strong>
-                <a href="{{route('property',[ 'sort'=>'low_high'])}}">Low to High</a> &nbsp;|&nbsp;
-                <a href="{{route('property',[ 'sort'=>'high_low'])}}">High to Low</a>
-            </div>
-            <br>
-            <div class="row">
+
             @forelse($properties as $property)
                <div class="col-lg-4 col-md-6">
                     
                         <div class="row" data-setbg="{{ asset('img/property-gallery/1.jpg')}}" style="background-image: {{ asset('img/property-gallery/1.jpg') }};">
-                            <a href="{{route('property-selected', $property->slug) }}"> <img src="{{asset('storage/'. $property->image)}}" alt="{{$property->slug}}"></a>
+                       <a href="{{route('property-selected', $property->slug) }}"> <img src="{{asset('storage/'. $property->image)}}" alt="{{$property->slug}}"></a>
                             <a href="#" class="room-content">
                                 <i class="flaticon-heart"></i>
                             </a>
@@ -51,7 +56,9 @@
                                 <a href="{{route('property-selected', $property->slug) }}">
                                     <h5>{{$property->description}}</h5></a>
                                 </div>
+                            
                                 <div class="row">
+                              
                                     <div class="col-md-3">
                                         <p>Lot Size</p>
                                         <img src="img/rooms/size.png" alt="">
@@ -73,6 +80,9 @@
                                         <img src="img/rooms/garage.png" alt="">
                                         <span>{{$property->parking}}</span>
                                     </div>
+                                    
+                                   
+                                
                                 </div>
                                 <hr>
                                 <br>

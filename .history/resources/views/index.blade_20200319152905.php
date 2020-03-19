@@ -156,13 +156,113 @@
 			@endforeach
 				
 			</div>
-			<div class="row" style="margin-bottom:60px;">
-			<a type="button" href="{{route('property')}}" class="btn btn-lg btn-outline-dark mx-auto " id="btn-view-products" style="margin-top:15px;">  View more properties</a>
-
-			</div>
 		</div>
 	</section>
 	<!-- Intro section end-->
+	
+	<!-- Design section end-->
+	<!-- <section class="design-section">
+		<div class="container">
+			<div class="section-title st-light">
+				<h2>our houses</h2>
+			</div>
+		</div>
+		<div class="design-slider owl-carousel">
+			<a href="img/design/1.jpg" class="img-popup-gallery">
+				<img src="img/design/1.jpg" alt="">
+				<i class="flaticon-151-reading-glasses"></i>
+			</a>
+			<a href="img/design/2.jpg" class="img-popup-gallery">
+				<img src="img/design/2.jpg" alt="">
+				<i class="flaticon-151-reading-glasses"></i>
+			</a>
+			<a href="img/design/3.jpg" class="img-popup-gallery">
+				<img src="img/design/3.jpg" alt="">
+				<i class="flaticon-151-reading-glasses"></i>
+			</a>
+			<a href="img/design/2.jpg" class="img-popup-gallery">
+				<img src="img/design/2.jpg" alt="">
+				<i class="flaticon-151-reading-glasses"></i>
+			</a>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="design-text text-white">
+						<h4>INTERIOR </h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="design-text text-white">
+						<h4>ENVIORMENT FRIENDLY</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section> -->
+	<!-- Design section end-->
+	
+	<!-- Location section-->
+	<section class="location-section spad">
+		<div class="container">
+			<div class="section-title">
+				<h2>location</h2>
+			</div>
+			<div class="row">
+				<div class="col-xl-10 offset-xl-1">
+					<div class="tab-content location-tab">
+						<div class="tab-pane fade show active" id="tab-1" role="tabpanel" aria-labelledby="tab-1">
+							<img src="img/location/1.jpg" alt="">
+							<a href="https://www.youtube.com/watch?v=Sz_1tkcU0Co" class="play-btn"><img src="img/play-icon.png" alt=""></a>
+						</div>
+						<div class="tab-pane fade" id="tab-2" role="tabpanel" aria-labelledby="tab-2">
+							<img src="img/location/2.jpg" alt="">
+							<a href="https://www.youtube.com/watch?v=7JTHzDiJ2NA" class="play-btn"><img src="img/play-icon.png" alt=""></a>
+						</div>
+						<div class="tab-pane fade" id="tab-3" role="tabpanel" aria-labelledby="tab-3">
+							<img src="img/location/3.jpg" alt="">
+							<a href="https://www.youtube.com/watch?v=g3tB7aFoyjY" class="play-btn"><img src="img/play-icon.png" alt=""></a>
+						</div>
+						<div class="tab-pane fade" id="tab-4" role="tabpanel" aria-labelledby="tab-4">
+							<img src="img/location/4.jpg" alt="">
+							<a href="youtube.com/watch?v=slJrBtarjgo" class="play-btn"><img src="img/play-icon.png" alt=""></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-12">
+					<ul class="nav nav-tabs location-tab-nav" role="tablist">
+						<li class="nav-item">
+							<a class="nav-link active" id="1-tab" data-toggle="tab" href="#tab-1" role="tab" aria-controls="tab-1" aria-selected="true">
+								<img src="img/location/thumb-1.jpg" alt="">
+								<h5>Surroundings</h5>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" id="2-tab" data-toggle="tab" href="#tab-2" role="tab" aria-controls="tab-2" aria-selected="false">
+								<img src="img/location/thumb-2.jpg" alt="">
+								<h5>Interior Design</h5>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" id="3-tab" data-toggle="tab" href="#tab-3" role="tab" aria-controls="tab-3" aria-selected="false">
+								<img src="img/location/thumb-3.jpg" alt="">
+								<h5>Comunity Pool</h5>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" id="4-tab" data-toggle="tab" href="#tab-4" role="tab" aria-controls="tab-4" aria-selected="false">
+								<img src="img/location/thumb-4.jpg" alt="">
+								<h5>Views</h5>
+							</a>
+						</li>
+					</ul>
+				</div>	
+			</div>
+		</div>
+	</section>
+	<!-- Location section end-->
 	@include('partials.index-partials.we-provide')
 	<!-- Call to action section -->
 	@include('partials.index-partials.call-to-action')

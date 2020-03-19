@@ -4,7 +4,7 @@
 			<div class="row">
 				<div class="col-lg-5 col-md-2 col-sm-12">
 					<div class="footer-widget">
-						<img src="img/yenebet-logo.png" width="60px"alt="yenebet logo">
+						<img src="img/yenebet-logo.png" width=""alt="yenebet logo">
 					</div>
 				</div>
 				<div class="col-lg-2 col-md-3 col-sm-4">
@@ -42,7 +42,6 @@
 			<div class="copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Yenebet
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
- <span style="color:grey;">site by </span><a href="http:\\azariagmt.github.io" target="_blank">Azaria</a>
 		</div>
 	</footer>
 	<!-- Footer section end-->
