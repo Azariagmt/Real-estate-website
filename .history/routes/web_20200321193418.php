@@ -35,7 +35,7 @@ Route::post('/multiuploads', 'UploadController@uploadSubmit');
 Route::get('send-mail', function () {
    
     $details = [
-        'title' => 'Mail from ItSolutionStuff.com',
+        'title' => '',
         'body' => 'This is for testing email using smtp'
     ];
    

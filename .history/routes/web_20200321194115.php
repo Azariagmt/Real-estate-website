@@ -30,7 +30,7 @@ Route::get('pagenotfound', 'HomeController@pageNotFound')->name('not-found');
 Route::get('/selling','PropertyController@getSellingPage')->name('selling');
 
 Route::get('/multiuploads', 'UploadController@uploadForm');
-Route::post('/multiuploads', 'UploadController@uploadSubmit');
+Route::post('/multiuploads', 'UploadController@uploadDocument');
 
 Route::get('send-mail', function () {
    

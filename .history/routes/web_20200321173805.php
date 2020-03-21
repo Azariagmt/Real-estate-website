@@ -29,20 +29,7 @@ Route::get('pagenotfound', 'HomeController@pageNotFound')->name('not-found');
 
 Route::get('/selling','PropertyController@getSellingPage')->name('selling');
 
-Route::get('/multiuploads', 'UploadController@uploadForm');
-Route::post('/multiuploads', 'UploadController@uploadSubmit');
 
-Route::get('send-mail', function () {
-   
-    $details = [
-        'title' => 'Mail from ItSolutionStuff.com',
-        'body' => 'This is for testing email using smtp'
-    ];
-   
-    \Mail::to('yenebet12@gmail.com')->send(new \App\Mail\MyTestMail($details));
-   
-    dd("Email is Sent.");
-});
 
 Route::group(['prefix' => 'laravel-filemanager', 
 'middleware' => ['web', 'auth']], function () {
