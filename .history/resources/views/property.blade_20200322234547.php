@@ -7,12 +7,6 @@
 .navbar{
     background-color:#353649;
 }
-.property-section-thumbnail{
-margin-left:15px;
-}
-.thumbnail-row, p{
-    margin-top:15px;
-}
 
 </style>
 <link rel="stylesheet" href="{{asset('../css/algolia.css')}}">
@@ -38,25 +32,15 @@ margin-left:15px;
             <div class="row">
 
                 <div class="col-md-6" >
-                    <img src="{{asset('storage/'. $property->image)}}" class="active" id="currentImage" width="400px;"alt="{{$property->slug}}">
+							<a href="{{route('property-selected', $property->slug) }}"> <img src="{{asset('storage/'. $property->image)}}" width="400px;"alt="{{$property->slug}}"></a>
 								<a href="#" class="room-content">
 								<i class="flaticon-heart"></i>
-                            </a>
-                            <div class="row thumbnail-row">
-                @if ($property->images)
-                    @foreach (json_decode($property->images, true) as $image)
-                        <div class="property-section-thumbnail border" >
-                            <img src="{{asset('storage/'. $image)}}" alt="property" width="50px">
-                        </div>
-                    @endforeach
-                @endif
-</div>
-
+							</a>
                 </div>
                 
                         
                 <div class="col-md-6 sider">
-                <h5>{!!$property->description!!}</h5>
+                <h5>{!!$property->description}}</h5>
         
                           <div class="row">
                                 <div class="col-md-3">
@@ -102,22 +86,6 @@ margin-left:15px;
     @endsection
 
     @section('extra-js')
-    <script>
-
-(function(){
-            const currentImage = document.querySelector('#currentImage');
-            const images = document.querySelectorAll('.property-section-thumbnail');
-
-            images.forEach((element) => element.addEventListener('click', thumbnailClick));
-
-            function thumbnailClick(e) {
-      
-                    currentImage.src = this.querySelector('img').src;
-            
-            }
-
-        })();
-        </script>
 	<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
    	<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
 	   <script src="{{asset('../js/algolia.js')}}"></script>

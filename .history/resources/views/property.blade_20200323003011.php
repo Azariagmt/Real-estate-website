@@ -43,6 +43,7 @@ margin-left:15px;
 								<i class="flaticon-heart"></i>
                             </a>
                             <div class="row thumbnail-row">
+
                 @if ($property->images)
                     @foreach (json_decode($property->images, true) as $image)
                         <div class="property-section-thumbnail border" >
@@ -111,9 +112,15 @@ margin-left:15px;
             images.forEach((element) => element.addEventListener('click', thumbnailClick));
 
             function thumbnailClick(e) {
-      
+                currentImage.classList.remove('active');
+
+                currentImage.addEventListener('transitionend', () => {
                     currentImage.src = this.querySelector('img').src;
-            
+                    currentImage.classList.add('active');
+                })
+
+                images.forEach((element) => element.classList.remove('selected'));
+                this.classList.add('selected');
             }
 
         })();

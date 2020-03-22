@@ -43,6 +43,11 @@ margin-left:15px;
 								<i class="flaticon-heart"></i>
                             </a>
                             <div class="row thumbnail-row">
+
+                            <div class="product-section-thumbnail selected">
+                    <img src="{{asset('storage/'. $property->image)}}" alt="product">
+                </div>
+
                 @if ($property->images)
                     @foreach (json_decode($property->images, true) as $image)
                         <div class="property-section-thumbnail border" >
@@ -109,11 +114,8 @@ margin-left:15px;
             const images = document.querySelectorAll('.property-section-thumbnail');
 
             images.forEach((element) => element.addEventListener('click', thumbnailClick));
-
             function thumbnailClick(e) {
-      
                     currentImage.src = this.querySelector('img').src;
-            
             }
 
         })();

@@ -38,7 +38,7 @@ margin-left:15px;
             <div class="row">
 
                 <div class="col-md-6" >
-                    <img src="{{asset('storage/'. $property->image)}}" class="active" id="currentImage" width="400px;"alt="{{$property->slug}}">
+                    <img src="{{asset('storage/'. $property->image)}}" id="currentImage" width="400px;"alt="{{$property->slug}}">
 								<a href="#" class="room-content">
 								<i class="flaticon-heart"></i>
                             </a>
@@ -111,9 +111,15 @@ margin-left:15px;
             images.forEach((element) => element.addEventListener('click', thumbnailClick));
 
             function thumbnailClick(e) {
-      
+                currentImage.classList.remove('active');
+
+                currentImage.addEventListener('transitionend', () => {
                     currentImage.src = this.querySelector('img').src;
-            
+                    currentImage.classList.add('active');
+                })
+
+                images.forEach((element) => element.classList.remove('selected'));
+                this.classList.add('selected');
             }
 
         })();
