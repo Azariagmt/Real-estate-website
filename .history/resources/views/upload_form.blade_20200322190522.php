@@ -7,6 +7,7 @@
 .navbar{
     background-color:#353649;
 }
+
 #dropContainer{
     border:1px solid grey;
     height:200px; 

@@ -7,6 +7,7 @@
 .navbar{
     background-color:#353649;
 }
+
 #dropContainer{
     border:1px solid grey;
     height:200px; 
@@ -23,6 +24,7 @@
 }
 .desc{
     line-height:200px !important;
+
 }
 .desc:hover{
     font-size:150%;

@@ -7,6 +7,7 @@
 .navbar{
     background-color:#353649;
 }
+
 #dropContainer{
     border:1px solid grey;
     height:200px; 
@@ -15,7 +16,7 @@
     line-height:200px !important;
 }
 #dropContainer:hover{
-    border:1.8px solid blue;
+    border:1.4px solid blue;
     height:200px; 
     width:100%;
     text-align:center;
@@ -23,9 +24,10 @@
 }
 .desc{
     line-height:200px !important;
+
 }
 .desc:hover{
-    font-size:150%;
+    font-weight:1.2%;
     color:blue;
 }
 </style>
@@ -69,11 +71,11 @@
 </div>
 @endif
 
-<!-- @error('name')
+@error('name')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
-                                @enderror -->
+                                @enderror
 <form method="post" action="{{url('multiuploads')}}" enctype="multipart/form-data">
     {{csrf_field()}}
     <div class="row">

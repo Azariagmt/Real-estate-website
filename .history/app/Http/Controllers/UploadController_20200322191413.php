@@ -180,18 +180,7 @@ public function uploadDocument(Request $request) {
 }
 
 public function uploadSuccess(){
-    $location =Location::all();
-    $status = Status::all();
-    $type = Type::all();
-    $phones = Phone::all();
-    $social = Social::all();
-    return view('upload-successful',[
-        'social'=>$social,
-        'phones'=>$phones,
-        'status'=>$status,
-        'type'=>$type,
-        'location'=>$location
-    ]);
+    return view('upload-successful');
 }
 
 }

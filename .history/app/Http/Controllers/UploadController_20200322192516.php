@@ -185,13 +185,7 @@ public function uploadSuccess(){
     $type = Type::all();
     $phones = Phone::all();
     $social = Social::all();
-    return view('upload-successful',[
-        'social'=>$social,
-        'phones'=>$phones,
-        'status'=>$status,
-        'type'=>$type,
-        'location'=>$location
-    ]);
+    return view('upload-successful');
 }
 
 }

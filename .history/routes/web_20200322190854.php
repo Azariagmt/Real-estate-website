@@ -32,7 +32,9 @@ Route::get('/selling','PropertyController@getSellingPage')->name('selling');
 Route::get('/sellProperty', 'UploadController@uploadForm')->name('sellProperty');
 Route::post('/multiuploads', 'UploadController@uploadDocument');
 
-Route::get('/uploadSuccessful', 'UploadController@uploadSuccess')->name('upload-successful');
+Route::get('/uploadSuccessful', function(){
+    return view('upload-successful')
+});
 
 Route::get('send-mail', function () {
    

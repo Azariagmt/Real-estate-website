@@ -186,11 +186,7 @@ public function uploadSuccess(){
     $phones = Phone::all();
     $social = Social::all();
     return view('upload-successful',[
-        'social'=>$social,
-        'phones'=>$phones,
-        'status'=>$status,
-        'type'=>$type,
-        'location'=>$location
+        
     ]);
 }
 

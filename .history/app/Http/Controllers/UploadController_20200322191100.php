@@ -31,7 +31,9 @@ return view('upload_form',[
 ]);
 }
 
-
+public function uploadSuccess(){
+    return view('');
+}
 public function uploadSubmit(Request $request)
 {
 // coding ….
@@ -177,21 +179,6 @@ public function uploadDocument(Request $request) {
 
     \Mail::to('yenebet12@gmail.com')->send(new \App\Mail\Upload($data));
     return view('upload-successful');
-}
-
-public function uploadSuccess(){
-    $location =Location::all();
-    $status = Status::all();
-    $type = Type::all();
-    $phones = Phone::all();
-    $social = Social::all();
-    return view('upload-successful',[
-        'social'=>$social,
-        'phones'=>$phones,
-        'status'=>$status,
-        'type'=>$type,
-        'location'=>$location
-    ]);
 }
 
 }
