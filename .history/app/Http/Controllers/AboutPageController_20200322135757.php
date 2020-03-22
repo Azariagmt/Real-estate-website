@@ -26,7 +26,6 @@ class AboutPageController extends Controller
 
         return view('about',[
             'aboutsNoCollection'=>$aboutsNoCollection,
-            'social'=>$social,
             'abouts'=>$abouts,
             'employees' =>$employees,
             'phones'=>$phones,

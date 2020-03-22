@@ -22,11 +22,9 @@ class AboutPageController extends Controller
         $phones = Phone::all();
         $abouts = About::all();
         $aboutsNoCollection =About::first();
-        $social = Social::all();
 
         return view('about',[
             'aboutsNoCollection'=>$aboutsNoCollection,
-            'social'=>$social,
             'abouts'=>$abouts,
             'employees' =>$employees,
             'phones'=>$phones,

@@ -20,9 +20,8 @@ class HomeController extends Controller
             $type = Type::all();
             $provides = Provide::all();
             $phones = Phone::all();
-            $social =Social::all();
+            
         return view('index',[
-            'social'=>$social,
             'phones' => $phones,
             'provides'=>$provides,
             'status'=>$status,

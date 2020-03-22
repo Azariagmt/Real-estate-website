@@ -22,7 +22,6 @@ class HomeController extends Controller
             $phones = Phone::all();
             $social =Social::all();
         return view('index',[
-            'social'=>$social,
             'phones' => $phones,
             'provides'=>$provides,
             'status'=>$status,

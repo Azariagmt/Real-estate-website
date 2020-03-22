@@ -102,7 +102,7 @@ class PropertyController extends Controller
         $phones = Phone::all();
         $social = Social::all();
         return view('search-results-algolia',[
-            'social'=>$social,
+            ''
             'phones'=>$phones,
             'status'=>$status,
             'type'=>$type,

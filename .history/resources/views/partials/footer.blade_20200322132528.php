@@ -34,8 +34,8 @@
 						<h5>SOCIAL</h5>
 						<div class="footer-social">
 						@foreach($social as $social)
-							<a href="{{$social->link}}"><i class="{{$social->icon}}"></i></a>
-						@endforeach
+		<a href="{{$social->link}}"><i class="{{$social->icon}}"></i></a>
+	@endforeach
 						</div>
 					</div>
 				</div>

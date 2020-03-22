@@ -23,7 +23,6 @@ class UploadController extends Controller
         $phones = Phone::all();
         $social = Social::all();
 return view('upload_form',[
-    'social'=>$social,
     'phones'=>$phones,
     'status'=>$status,
     'type'=>$type,

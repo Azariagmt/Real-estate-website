@@ -21,9 +21,7 @@ class UploadController extends Controller
         $status = Status::all();
         $type = Type::all();
         $phones = Phone::all();
-        $social = Social::all();
 return view('upload_form',[
-    'social'=>$social,
     'phones'=>$phones,
     'status'=>$status,
     'type'=>$type,

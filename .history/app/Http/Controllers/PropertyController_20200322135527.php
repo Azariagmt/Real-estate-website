@@ -64,7 +64,7 @@ class PropertyController extends Controller
         $social = Social::all();
         return view('properties',
     [   'phones'=>$phones,
-        'social'=>$social,
+    'social'=>$social,
         'status'=>$status,
         'type'=>$type,
         'location'=>$location,
@@ -82,7 +82,7 @@ class PropertyController extends Controller
         $social = Social::all();
 
         return view('property',[
-            'social'=>$social,
+            'social'
             'phones'=>$phones,
             'status'=>$status,
             'type'=>$type,
@@ -102,7 +102,6 @@ class PropertyController extends Controller
         $phones = Phone::all();
         $social = Social::all();
         return view('search-results-algolia',[
-            'social'=>$social,
             'phones'=>$phones,
             'status'=>$status,
             'type'=>$type,

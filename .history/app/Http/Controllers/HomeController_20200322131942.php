@@ -9,7 +9,7 @@ use App\Status;
 use App\Type;
 use App\Provide;
 use App\Phone;
-use App\Social;
+use 
 class HomeController extends Controller
 {
     public function getIndex(){
@@ -20,9 +20,7 @@ class HomeController extends Controller
             $type = Type::all();
             $provides = Provide::all();
             $phones = Phone::all();
-            $social =Social::all();
         return view('index',[
-            'social'=>$social,
             'phones' => $phones,
             'provides'=>$provides,
             'status'=>$status,

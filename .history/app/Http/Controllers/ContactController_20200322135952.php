@@ -15,7 +15,6 @@ class ContactController extends Controller
         $social = Social::all();
         return view('contact',[
             'aboutsNoCollection'=>$aboutsNoCollection,
-            'social'=>$social,
             'phones'=>$phones
         ]);
     }
