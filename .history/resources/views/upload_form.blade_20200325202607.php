@@ -159,8 +159,9 @@
         </div>
 <div class="row form-group">
 <label for="text-area">Description: (optional)</label>
-    <textarea id="text-area" name="description" rows="4" cols="50">
-    </textarea>
+
+<textarea id="text-area" name="description" rows="4" cols="50">
+</textarea>
 </div>
     <div class="row">
 

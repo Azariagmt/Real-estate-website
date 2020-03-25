@@ -124,7 +124,7 @@
             <!-- <input type="number" class="form-control border" name="size" min="0"> -->
             <select id="location" name="location">
                 @foreach($location as $location)
-                    <option value="{{$location->name}}">{{$location->name}}</option>
+                    <option value="{{$location->name}}">{{$location}}</option>
                 @endforeach
             </select>
         </div>
@@ -133,7 +133,7 @@
             <!-- <input type="number" class="form-control border" name="size" min="0"> -->
             <select id="status" name="status">
                 @foreach($status as $status)
-                    <option value="{{$status->name}}">{{$status->name}}</option>
+                    <option value="{{$status}}">{{$status}}</option>
                 @endforeach
             </select>
         </div>
@@ -144,7 +144,7 @@
             <!-- <input type="number" class="form-control border" name="size" min="0"> -->
             <select id="type" name="type">
                 @foreach($type as $type)
-                    <option value="{{$type->name}}">{{$type->name}}</option>
+                    <option value="{{$type}}">{{$type}}</option>
                 @endforeach
             </select>
         </div>
@@ -159,8 +159,10 @@
         </div>
 <div class="row form-group">
 <label for="text-area">Description: (optional)</label>
-    <textarea id="text-area" name="description" rows="4" cols="50">
-    </textarea>
+
+<textarea id="text-area" name="description" rows="4" cols="50">
+</textarea>
+
 </div>
     <div class="row">
 
