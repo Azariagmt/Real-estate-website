@@ -34,7 +34,17 @@ Route::post('/multiuploads', 'UploadController@uploadDocument');
 
 Route::get('/uploadSuccessful', 'UploadController@uploadSuccess')->name('upload-successful');
 
-Route::get('send-mail', 'SocialController@sendMail')->name('sendMail');
+Route::get('send-mail', ''function () {
+   
+    $details = [
+        'title' => 'Mail from ItSolutionStuff.com',
+        'body' => 'This is for testing email using smtp'
+    ];
+   
+    \Mail::to('yenebet12@gmail.com')->send(new \App\Mail\MyTestMail($details));
+   
+    dd("Email is Sent.");
+});
 
 Route::group(['prefix' => 'laravel-filemanager', 
 'middleware' => ['web', 'auth']], function () {

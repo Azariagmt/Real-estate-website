@@ -34,7 +34,7 @@ Route::post('/multiuploads', 'UploadController@uploadDocument');
 
 Route::get('/uploadSuccessful', 'UploadController@uploadSuccess')->name('upload-successful');
 
-Route::get('send-mail', 'SocialController@sendMail')->name('sendMail');
+Route::get('send-mail', 'SocialController@sendMail')-<name('sendMail');
 
 Route::group(['prefix' => 'laravel-filemanager', 
 'middleware' => ['web', 'auth']], function () {
