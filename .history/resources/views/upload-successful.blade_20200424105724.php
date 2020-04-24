@@ -17,9 +17,9 @@
 	<div id="preloder">
 		<div class="loader"></div>
 	</div>
-
+	
 	<!-- Header section -->
-
+  
     @if (count($errors) > 0)
 <div class="alert alert-danger">
 <ul>

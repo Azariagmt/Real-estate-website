@@ -25,7 +25,7 @@ Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
 Route::get('/search-algolia', 'PropertyController@searchAlgolia')->name('search-algolia');
-Route::get('pageNotFound', 'HomeController@pageNotFound')->name('not-found');
+Route::get('pageNotfound', 'HomeController@pageNotFound')->name('not-found');
 
 Route::get('/selling','PropertyController@getSellingPage')->name('selling');
 
@@ -34,7 +34,7 @@ Route::post('/multiuploads', 'UploadController@uploadDocument');
 
 Route::get('/uploadSuccessful', 'UploadController@uploadSuccess')->name('upload-successful');
 
-Route::get('send-mail', 'uploadController@sendMail')->name('sendMail');
+Route::get('send-mail', 'SocialController@sendMail')->name('sendMail');
 
 Route::group(['prefix' => 'laravel-filemanager', 
 'middleware' => ['web', 'auth']], function () {

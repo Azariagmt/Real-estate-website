@@ -85,12 +85,7 @@ $this->validate($request, [
 
 
 public function uploadDocument(Request $request) {
-    $location =Location::all();
-    $status = Status::all();
-    $type = Type::all();
-    $phones = Phone::all();
-    $social = Social::all();
- 
+   
     // Get the uploades file with name document
     $photos = $request->file('photos');
 
