@@ -10,7 +10,10 @@
 					</div>
 					@foreach($seo as $seo)
 					<info style="color:white">
-					{{ $seo->description }}
+					Search from a wide range of Houses for Sale from across Ethiopia. Get the very best prices from trusted sellers today!
+
+Browse through thousands of real estate houses, apartments & plots from reputable companies & agents. Rent or buy easily!
+Buy or sell your house or villa online in Addis Ababa at the best price ✓ Real estate classifieds in Addis Ababa ✓ Post your Ad for free to sell your house ✓ Buy
 					</info>
 					@endforeach
 				</div>

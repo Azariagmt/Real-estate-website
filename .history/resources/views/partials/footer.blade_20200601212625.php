@@ -10,7 +10,7 @@
 					</div>
 					@foreach($seo as $seo)
 					<info style="color:white">
-					{{ $seo->description }}
+					
 					</info>
 					@endforeach
 				</div>

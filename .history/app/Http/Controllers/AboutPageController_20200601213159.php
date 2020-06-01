@@ -37,8 +37,6 @@ class AboutPageController extends Controller
             'status'=>$status,
             'type'=>$type,
             'location'=>$location,
-            'seo'=>$seo,
-            'logo'=>$logo
         ]);
     }
 }

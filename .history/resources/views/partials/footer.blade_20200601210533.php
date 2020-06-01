@@ -8,11 +8,7 @@
 						<img src="{{asset('img/yenebet-logo.png')}}" width="60px"alt="yenebet logo">
 						</a>
 					</div>
-					@foreach($seo as $seo)
-					<info style="color:white">
-					{{ $seo->description }}
-					</info>
-					@endforeach
+					
 				</div>
 				<div class="col-lg-2 col-md-3 col-sm-4 col-4">
 					<div class="footer-widget">

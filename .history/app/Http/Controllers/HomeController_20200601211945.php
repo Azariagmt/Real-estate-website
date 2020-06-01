@@ -28,7 +28,7 @@ $seo= Seo::all();
             $social =Social::all();
         return view('index',[
             'logo'=> $logo,
-'seo'=> $seo,
+'seo'=> $
             'social'=>$social,
             'phones' => $phones,
             'provides'=>$provides,

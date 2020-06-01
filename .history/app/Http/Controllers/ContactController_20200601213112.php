@@ -6,8 +6,6 @@ use Illuminate\Http\Request;
 use App\Phone;
 use App\About;
 use App\Social;
-use App\Logo;
-use App\Seo;
 
 class ContactController extends Controller
 {
@@ -15,9 +13,7 @@ class ContactController extends Controller
         $phones = Phone::first();
         $aboutsNoCollection =About::first();
         $social = Social::all();
-        $logo = Logo::all();
-        $seo= Seo::all();
-
+        
         return view('contact',[
             'aboutsNoCollection'=>$aboutsNoCollection,
             'social'=>$social,

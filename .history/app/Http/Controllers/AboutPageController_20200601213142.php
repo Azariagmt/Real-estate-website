@@ -11,8 +11,6 @@ use App\Phone;
 use App\About;
 use App\Social;
 use App\Employee;
-use App\Logo;
-use App\Seo;
 
 class AboutPageController extends Controller
 {
@@ -37,8 +35,6 @@ class AboutPageController extends Controller
             'status'=>$status,
             'type'=>$type,
             'location'=>$location,
-            'seo'=>$seo,
-            'logo'=>$logo
         ]);
     }
 }

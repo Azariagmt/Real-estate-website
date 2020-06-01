@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-none fixed-top mx-auto" >
     <a href="{{route('landing-page')}}" class="site-logo navbar-brand" style="margin-left:30px;">
 			@foreach($logo as $logo)
-      <img src="{{ $logo->logo}}" alt="" class="img-fluid" width="60px">
+      <img src="" alt="" class="img-fluid" width="60px">
       @endforeach
 		</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

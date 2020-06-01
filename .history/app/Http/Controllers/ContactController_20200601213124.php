@@ -15,8 +15,7 @@ class ContactController extends Controller
         $phones = Phone::first();
         $aboutsNoCollection =About::first();
         $social = Social::all();
-        $logo = Logo::all();
-        $seo= Seo::all();
+        
 
         return view('contact',[
             'aboutsNoCollection'=>$aboutsNoCollection,

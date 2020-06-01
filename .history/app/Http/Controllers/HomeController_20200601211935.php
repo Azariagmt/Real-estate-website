@@ -17,7 +17,7 @@ class HomeController extends Controller
 {
     public function getIndex(){
         $logo = Logo::all();
-$seo= Seo::all();
+$seo= Seo::all()
              $propertiesForHeader =Property::where('featured', true)->take(3)->inRandomOrder()->get();
              $properties =Property::where('featured', true)->take(4)->inRandomOrder()->get();
             $location =Location::all();
@@ -28,7 +28,7 @@ $seo= Seo::all();
             $social =Social::all();
         return view('index',[
             'logo'=> $logo,
-'seo'=> $seo,
+
             'social'=>$social,
             'phones' => $phones,
             'provides'=>$provides,

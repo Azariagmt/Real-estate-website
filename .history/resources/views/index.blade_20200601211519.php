@@ -68,7 +68,7 @@
 					@foreach($propertiesForHeader as $property)
 						<div class="hns-item">
 							<h5>{{$property->bedrooms}} Bedrooms</h5>
-							<p>{!!$property->details!!}</p>
+							<p>{!!$property->description!!}</p>
 							<span>{{$property->presentPrice()}}</span>
 						</div>
 					@endforeach
@@ -105,7 +105,7 @@
 						<div class="col-md-12">
 							<div class="row">
 								<a href="{{route('property-selected', $property->slug) }}">
-									<h5>{!!$property->details!!}</h5></a>
+									<h5>{!!$property->description!!}</h5></a>
 							</div>
 						
 							<div class="row">

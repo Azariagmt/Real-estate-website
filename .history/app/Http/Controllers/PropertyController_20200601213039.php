@@ -75,8 +75,6 @@ class PropertyController extends Controller
         'location'=>$location,
         'categoryName'=>$categoryName,
         'properties' => $properties,
-        'logo'=> $logo,
-        'seo'=> $seo
 
     ]);
     }

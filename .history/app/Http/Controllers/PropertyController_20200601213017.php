@@ -75,8 +75,6 @@ class PropertyController extends Controller
         'location'=>$location,
         'categoryName'=>$categoryName,
         'properties' => $properties,
-        'logo'=> $logo,
-        'seo'=> $seo
 
     ]);
     }
@@ -97,9 +95,7 @@ class PropertyController extends Controller
             'status'=>$status,
             'type'=>$type,
             'location'=>$location,
-            'property'=> $property,
-            'logo'=> $logo,
-            'seo'=> $seo
+            'property'=> $property
         ]);
     }
 
@@ -115,15 +111,13 @@ class PropertyController extends Controller
         $social = Social::all();
         $logo = Logo::all();
         $seo= Seo::all();
-
+        
         return view('search-results-algolia',[
             'social'=>$social,
             'phones'=>$phones,
             'status'=>$status,
             'type'=>$type,
-            'location'=>$location,
-            'logo'=> $logo,
-            'seo'=> $seo
+            'location'=>$location
         ]);
     }
 

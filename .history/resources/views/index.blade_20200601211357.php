@@ -51,7 +51,7 @@
 					<div class="container">
 						<div class="row">
 							<div class="col-xl-6 col-lg-7">
-								<h2>{!! $property->details !!} </h2>
+								<h2>{!! $property->detail !!} </h2>
 									
 							</div>
 						</div>
@@ -68,7 +68,7 @@
 					@foreach($propertiesForHeader as $property)
 						<div class="hns-item">
 							<h5>{{$property->bedrooms}} Bedrooms</h5>
-							<p>{!!$property->details!!}</p>
+							<p>{!!$property->description!!}</p>
 							<span>{{$property->presentPrice()}}</span>
 						</div>
 					@endforeach
@@ -83,7 +83,7 @@
 	<section class="intro-section">
 		<div class="container">
 			<div class="section-title">
-				<h2>Featured houses</h2>
+				<h2>Feautured houses</h2>
 			</div>
 			<div class="row">
 
@@ -105,7 +105,7 @@
 						<div class="col-md-12">
 							<div class="row">
 								<a href="{{route('property-selected', $property->slug) }}">
-									<h5>{!!$property->details!!}</h5></a>
+									<h5>{!!$property->description!!}</h5></a>
 							</div>
 						
 							<div class="row">

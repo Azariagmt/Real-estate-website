@@ -68,7 +68,7 @@
 					@foreach($propertiesForHeader as $property)
 						<div class="hns-item">
 							<h5>{{$property->bedrooms}} Bedrooms</h5>
-							<p>{!!$property->details!!}</p>
+							<p>{!!$property->description!!}</p>
 							<span>{{$property->presentPrice()}}</span>
 						</div>
 					@endforeach
