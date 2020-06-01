@@ -11,12 +11,16 @@ use App\Location;
 use App\Type;
 use App\Phone;
 use App\Social;
+use App\Logo;
+use App\Seo;
 use Input;
 
 class UploadController extends Controller
 {
     public function uploadForm()
 {
+    
+    $seo = Seo::all();
         $location =Location::all();
         $status = Status::all();
         $type = Type::all();
@@ -85,7 +89,12 @@ $this->validate($request, [
 
 
 public function uploadDocument(Request $request) {
-   
+    $location =Location::all();
+    $status = Status::all();
+    $type = Type::all();
+    $phones = Phone::all();
+    $social = Social::all();
+ 
     // Get the uploades file with name document
     $photos = $request->file('photos');
 
@@ -177,7 +186,13 @@ public function uploadDocument(Request $request) {
     // send the email
 
     \Mail::to('yenebet12@gmail.com')->send(new \App\Mail\Upload($data));
-    return view('upload-successful',[]);
+    return view('upload-successful',[
+        'social'=>$social,
+        'phones'=>$phones,
+        'status'=>$status,
+        'type'=>$type,
+        'location'=>$location
+    ]);
 }
 
 public function uploadSuccess(){

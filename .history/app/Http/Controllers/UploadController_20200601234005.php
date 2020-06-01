@@ -28,7 +28,7 @@ class UploadController extends Controller
         $social = Social::all();
 return view('upload_form',[
     'seo' => $seo,
-    'logo' => $logo,
+    
     'social'=>$social,
     'phones'=>$phones,
     'status'=>$status,
@@ -203,12 +203,7 @@ public function uploadSuccess(){
     $type = Type::all();
     $phones = Phone::all();
     $social = Social::all();
-    $phones = Phone::all();
-        $social = Social::all();
-
     return view('upload-successful',[
-        'seo' => $seo,
-    'logo' => $logo,
         'social'=>$social,
         'phones'=>$phones,
         'status'=>$status,

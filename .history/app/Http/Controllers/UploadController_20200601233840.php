@@ -11,24 +11,19 @@ use App\Location;
 use App\Type;
 use App\Phone;
 use App\Social;
-use App\Logo;
-use App\Seo;
+
 use Input;
 
 class UploadController extends Controller
 {
     public function uploadForm()
 {
-    $logo = Logo::all();
-    $seo = Seo::all();
         $location =Location::all();
         $status = Status::all();
         $type = Type::all();
         $phones = Phone::all();
         $social = Social::all();
 return view('upload_form',[
-    'seo' => $seo,
-    'logo' => $logo,
     'social'=>$social,
     'phones'=>$phones,
     'status'=>$status,
@@ -203,12 +198,7 @@ public function uploadSuccess(){
     $type = Type::all();
     $phones = Phone::all();
     $social = Social::all();
-    $phones = Phone::all();
-        $social = Social::all();
-
     return view('upload-successful',[
-        'seo' => $seo,
-    'logo' => $logo,
         'social'=>$social,
         'phones'=>$phones,
         'status'=>$status,

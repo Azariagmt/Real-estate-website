@@ -205,10 +205,8 @@ public function uploadSuccess(){
     $social = Social::all();
     $phones = Phone::all();
         $social = Social::all();
-
+        
     return view('upload-successful',[
-        'seo' => $seo,
-    'logo' => $logo,
         'social'=>$social,
         'phones'=>$phones,
         'status'=>$status,
