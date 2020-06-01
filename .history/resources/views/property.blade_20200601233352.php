@@ -51,7 +51,7 @@ margin-left:15px;
                     </div>
                 </div>
                 <div class="col-md-6 sider">
-                 <h5>{!!$property->details!!}</h5>
+                 <h5>{!!$property->description!!}{!!$property->details!!}</h5>
                     <div class="row">
                         <div class="col-md-3">
                             <p>Lot Size</p>
@@ -77,7 +77,7 @@ margin-left:15px;
                     </div>
                         <p>
 
-                        {!!$property->description!!}
+                            
                         </p>
 
                         <div class="row">

@@ -77,7 +77,7 @@ margin-left:15px;
                     </div>
                         <p>
 
-                        {!!$property->description!!}
+                            
                         </p>
 
                         <div class="row">
