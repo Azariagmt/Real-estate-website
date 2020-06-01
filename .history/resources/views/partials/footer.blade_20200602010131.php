@@ -8,7 +8,7 @@
 						
 
 						@foreach($logo as $logo)
-	  <img src="{{asset('storage/'. $logo->logo)}}" width="60px"alt="yenebet logo">
+	  <img src="{{ $logo->logo }}" width="60px"alt="yenebet logo">
       @endforeach
 						</a>
 					</div>
