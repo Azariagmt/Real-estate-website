@@ -10,7 +10,7 @@
 						@foreach (json_decode($logo->logo, true) as $image)
 	  <img src="{{asset('storage/'. $image)}}" width="60px"alt="yenebet logo">
 	  @endforeach
-@endif
+
 						</a>
 					</div>
 					@foreach($seo as $seo)

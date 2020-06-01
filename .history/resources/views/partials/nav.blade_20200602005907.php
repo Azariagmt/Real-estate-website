@@ -4,7 +4,7 @@
       @foreach (json_decode($logo->logo, true) as $image)
       <img src="{{asset('storage/'. $image)}}" alt="" class="img-fluid" width="60px">
       @endforeach
-      @endif
+      
 
 		</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
