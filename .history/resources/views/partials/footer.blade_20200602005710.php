@@ -5,7 +5,7 @@
 				<div class="col-lg-5 col-md-2 col-sm-12">
 					<div class="footer-widget">
 					<a href="{{route('landing-page')}}" class="site-logo navbar-brand" style="margin-left:30px;">
-
+						
 
 						@foreach (json_decode($logo->logo, true) as $image)
 	  <img src="{{asset('storage/'. $image)}}" width="60px"alt="yenebet logo">

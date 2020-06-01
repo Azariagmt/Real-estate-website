@@ -4,7 +4,7 @@
       @foreach (json_decode($logo->logo, true) as $image)
       <img src="{{asset('storage/'. $image)}}" alt="" class="img-fluid" width="60px">
       @endforeach
-
+      
 		</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
   <div class="nav-switch">
@@ -15,7 +15,7 @@
     <ul class="navbar-nav mx-auto col-lg-12 .d-none .d-md-block .d-lg-block">
       <ul style="list-style:none;" class="col-md-12">
         <li class="nav-item row">
-
+       
             <div class="col-md-6">
               <div class="row ">
                   @foreach($phones as $phone)
@@ -37,7 +37,7 @@
 
               </div>
               </div>
-
+            
         </li>
 
       <ul class="navbar-nav  main-menu border row" style="background-color:#9e9e9e;">
