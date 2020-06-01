@@ -8,6 +8,7 @@
 						
 
 						@foreach($logo as $logo)
+      <img src="{{ $logo->logo}}" alt="" class="img-fluid" width="60px">
 	  <img src="{{ $logo->logo)}}" width="60px"alt="yenebet logo">
       @endforeach
 						</a>

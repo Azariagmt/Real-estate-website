@@ -5,10 +5,10 @@
 				<div class="col-lg-5 col-md-2 col-sm-12">
 					<div class="footer-widget">
 					<a href="{{route('landing-page')}}" class="site-logo navbar-brand" style="margin-left:30px;">
-						
+						<img src="{{asset('img/yenebet-logo.png')}}" width="60px"alt="yenebet logo">
 
 						@foreach($logo as $logo)
-	  <img src="{{ $logo->logo)}}" width="60px"alt="yenebet logo">
+      <img src="{{ $logo->logo}}" alt="" class="img-fluid" width="60px">
       @endforeach
 						</a>
 					</div>
