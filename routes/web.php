@@ -11,6 +11,9 @@
 |
 */
 
+Auth::routes(['verify' => true]);
+Auth::routes();
+
 Route::get('/', 'HomeController@getIndex')->name('landing-page');
 
 Route::get('/contact', 'ContactController@getContactForm')->name('contact');

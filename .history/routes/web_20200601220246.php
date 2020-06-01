@@ -11,6 +11,9 @@
 |
 */
 
+Auth::routes(['verify' => true]);
+Auth::routes();
+
 Route::get('/', 'HomeController@getIndex')->name('landing-page');
 
 Route::get('/contact', 'ContactController@getContactForm')->name('contact');
@@ -25,7 +28,7 @@ Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
 Route::get('/search-algolia', 'PropertyController@searchAlgolia')->name('search-algolia');
-Route::get('pagenotfound', 'HomeController@pageNotFound')->name('not-found');
+Route::get('pageNotFound', 'HomeController@pageNotFound')->name('not-found');
 
 Route::get('/selling','PropertyController@getSellingPage')->name('selling');
 
@@ -34,17 +37,7 @@ Route::post('/multiuploads', 'UploadController@uploadDocument');
 
 Route::get('/uploadSuccessful', 'UploadController@uploadSuccess')->name('upload-successful');
 
-Route::get('send-mail', 'SocialController@'function () {
-   
-    $details = [
-        'title' => 'Mail from ItSolutionStuff.com',
-        'body' => 'This is for testing email using smtp'
-    ];
-   
-    \Mail::to('yenebet12@gmail.com')->send(new \App\Mail\MyTestMail($details));
-   
-    dd("Email is Sent.");
-});
+Route::get('send-mail', 'uploadController@sendMail')->name('sendMail');
 
 Route::group(['prefix' => 'laravel-filemanager', 
 'middleware' => ['web', 'auth']], function () {
