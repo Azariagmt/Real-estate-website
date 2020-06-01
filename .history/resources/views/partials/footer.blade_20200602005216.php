@@ -8,9 +8,8 @@
 						
 
 						@foreach($logo as $logo)
-						@foreach (json_decode($logo->logo, true) as $image)
-	  <img src="{{asset('storage/'. $image)}}" width="60px"alt="yenebet logo">
-	  @endforeach
+						@foreach (json_decode($property->images, true) as $image)
+	  <img src="{{ $logo->logo }}" width="60px"alt="yenebet logo">
       @endforeach
 						</a>
 					</div>

@@ -1,8 +1,8 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-none fixed-top mx-auto" >
     <a href="{{route('landing-page')}}" class="site-logo navbar-brand" style="margin-left:30px;">
 			@foreach($logo as $logo)
-      @foreach (json_decode($logo->logo, true) as $image)
-      <img src="{{asset('storage/'. $image)}}" alt="" class="img-fluid" width="60px">
+      @foreach (json_decode($property->images, true) as $image)
+      <img src="{{ $logo->logo}}" alt="" class="img-fluid" width="60px">
       @endforeach
       @endforeach
 		</a>
